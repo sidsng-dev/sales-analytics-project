@@ -1,0 +1,486 @@
+/* =========================================================
+   SETTINGS PAGE
+   ========================================================= */
+
+.settings-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.settings-header {
+  margin-bottom: 22px;
+}
+
+.settings-header h1 {
+  margin: 0 0 5px;
+  color: #f4f6fb;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.settings-header p {
+  margin: 0;
+  color: #697286;
+  font-size: 13px;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.settings-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* =========================================================
+   LEFT NAVIGATION
+   ========================================================= */
+
+.settings-nav {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background: #11151f;
+  border: 1px solid #222838;
+  border-radius: 12px;
+}
+
+.settings-nav-btn {
+  width: 100%;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 14px;
+  margin-bottom: 5px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #7f899d;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: left;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.settings-nav-btn:last-child {
+  margin-bottom: 0;
+}
+
+.settings-nav-btn:hover {
+  background: #171d29;
+  color: #c7cedb;
+}
+
+.settings-nav-btn.active {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+}
+
+.settings-nav-btn.active svg {
+  color: #818cf8;
+}
+
+/* =========================================================
+   CONTENT CARD
+   ========================================================= */
+
+.settings-card {
+  width: 100%;
+  min-height: 420px;
+
+  box-sizing: border-box;
+
+  padding: 26px 28px;
+
+  background: #11151f;
+  border: 1px solid #222838;
+  border-radius: 12px;
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.settings-card-header {
+  margin-bottom: 18px;
+}
+
+.settings-card-header h2 {
+  margin: 0 0 5px;
+
+  color: #f4f6fb;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.settings-card-header p {
+  margin: 0;
+
+  color: #697286;
+  font-size: 12px;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.settings-line {
+  width: 100%;
+  height: 1px;
+  background: #222838;
+  margin: 18px 0;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.settings-field {
+  width: 100%;
+}
+
+.settings-field label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #aeb6c7;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.settings-field input {
+  width: 100%;
+  height: 44px;
+
+  box-sizing: border-box;
+
+  padding: 0 13px;
+
+  border: 1px solid #272d3d;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #171d29;
+  color: #e5e7eb;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition: border-color 0.2s ease;
+}
+
+.settings-field input:focus {
+  border-color: #6366f1;
+}
+
+.settings-field input::placeholder {
+  color: #596275;
+}
+
+/* =========================================================
+   ROLE
+   ========================================================= */
+
+.role-display {
+  width: 100%;
+  height: 44px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 13px;
+
+  border: 1px solid #272d3d;
+  border-radius: 8px;
+
+  background: #171d29;
+
+  color: #858ea1;
+  font-size: 13px;
+}
+
+.role-badge {
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.role-badge.admin {
+  background: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+}
+
+.role-badge.analyst {
+  background: rgba(34, 211, 238, 0.1);
+  color: #22d3ee;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.settings-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.save-settings-btn {
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 16px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #6366f1;
+  color: white;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.save-settings-btn:hover {
+  background: #4f46e5;
+}
+
+.saved-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #34d399;
+  font-size: 11px;
+}
+
+/* =========================================================
+   NOTIFICATIONS
+   ========================================================= */
+
+.notification-settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-setting {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #222838;
+}
+
+.notification-setting:last-child {
+  border-bottom: 0;
+}
+
+.notification-setting div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.notification-setting strong {
+  color: #e5e7eb;
+  font-size: 12px;
+}
+
+.notification-setting span {
+  color: #697286;
+  font-size: 10px;
+}
+
+.notification-setting input {
+  width: 17px;
+  height: 17px;
+
+  accent-color: #6366f1;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+.security-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.security-item {
+  min-height: 62px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #272d3d;
+  border-radius: 8px;
+
+  background: #171d29;
+
+  color: #818cf8;
+}
+
+.security-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.security-item strong {
+  color: #dce0e8;
+  font-size: 12px;
+}
+
+.security-item span {
+  color: #697286;
+  font-size: 10px;
+}
+
+/* =========================================================
+   APPEARANCE
+   ========================================================= */
+
+.appearance-setting {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #272d3d;
+  border-radius: 8px;
+
+  background: #171d29;
+
+  color: #818cf8;
+}
+
+.appearance-setting div {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appearance-setting strong {
+  color: #dce0e8;
+  font-size: 12px;
+}
+
+.appearance-setting div span {
+  color: #697286;
+  font-size: 10px;
+}
+
+.appearance-status {
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .settings-container {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .settings-nav-btn {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-actions {
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .save-settings-btn {
+    width: 100%;
+  }
+
+  .saved-message {
+    justify-content: center;
+  }
+}
